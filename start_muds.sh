@@ -10,6 +10,7 @@ HOST_PORT=8888
 LOCAL_PATH="/mnt/data/MUDS/EST/Practice"
 IMAGE="jupyter/datascience-notebook"
 URL="http://127.0.0.1:${HOST_PORT}/lab"
+JUPYTER_TOKEN="muds2025"
 
 # --- Colors ---
 GREEN="\033[1;32m"
@@ -40,11 +41,13 @@ if [ "$(docker ps -aq -f name=$CONTAINER_NAME)" ]; then
 else
     echo -e "${GREEN}🚀 Creant contenidor nou...${RESET}"
     docker run -d \
+	--restart unless-stopped \
         -p ${HOST_PORT}:8888 \
         --name ${CONTAINER_NAME} \
         -e JUPYTER_ENABLE_LAB=yes \
-        -e JUPYTER_TOKEN='' \
+        -e JUPYTER_TOKEN=${JUPYTER_TOKEN} \
         -v ${LOCAL_PATH}:/home/jovyan/work \
+	-v /home/gerardpf/.jupyter_theme:/home/jovyan/.jupyter/lab/user-settings/@jupyterlab/apputils-extension \
         ${IMAGE} >/dev/null
 fi
 

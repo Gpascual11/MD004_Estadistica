@@ -1,0 +1,43 @@
+data <- read.csv(file="dataset.csv", sep=",", head=TRUE)
+head(data) # per veure els primers / data # per veure tot
+
+data[x,y] # x - fila / y - columna
+data$col_name
+
+data[5:10, c(2,4)] # Accés columnes 2 i 4 del rang de files 5 a la 10
+
+# Combinar condicions amb '&' (I)
+# Files on l'Edat > 30 I la Ciutat sigui "Barcelona"
+data[data$Edat > 30 & data$Ciutat == "Barcelona", ]
+
+# Combinar condicions amb '|' (O)
+data[data$Edat < 18 | data$Edat > 65, ]
+
+# Ús de %in% per a múltiples valors
+# Files on la Ciutat sigui "Girona" O "Lleida" O "Tarragona"
+ciutats_interes <- c("Girona", "Lleida", "Tarragona")
+data[data$Ciutat %in% ciutats_interes, ]
+
+# Seleccionar MÚLTIPLES columnes per nom
+# (Això és molt més llegible que fer servir números)
+data[ , c("Nom", "Edat", "Resultat")]
+
+# Vull les columnes 'Nom' i 'Edat' NOMÉS de les persones de "Barcelona"
+data[data$Ciutat == "Barcelona", c("Nom", "Edat")]
+
+# Vull la columna 'Resultat' NOMÉS de les persones de més de 50 anys
+data[data$Edat > 50, "Resultat"]
+
+# Totes les dades EXCEPTE la primera fila
+data[-1, ]
+
+# Totes les dades EXCEPTE les files de la 5 a la 10
+data[-(5:10), ]
+
+# Totes les dades EXCEPTE la segona columna
+data[ , -2]
+
+# Totes les dades EXCEPTE les columnes 'ID_Client' i 'Telefon'
+data[ , -c("ID_Client", "Telefon")] # (Això només funciona si les columnes tenen noms)
+# Si no tenen noms, faries:
+data[ , -c(1, 3)] # Elimina columnes 1 i 3

@@ -1,0 +1,23 @@
+pip install --upgrade jupyterlab-git
+
+jupyter labextension install @jupyterlab/git@0.51.2
+
+jupyter lab build
+
+
+ctrl + c -> jupytermuds
+
+
+# Instal·la el tema com a paquet de Python
+pip install theme-material-darcula
+
+# Després de la instal·lació, has de reconstruir l'aplicació JupyterLab per carregar els actius del tema
+jupyter lab build
+
+mamba install -c conda-forge r-nloptr r-lme4
+
+mamba install -c conda-forge r-agricolae
+
+rm -r /opt/conda/lib/R/library/00LOCK-agricolae
+
+conda install -c conda-forge r-agricolae

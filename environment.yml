@@ -1,0 +1,46 @@
+name: r_ds
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Core Python & Jupyter
+  - python=3.10
+  - jupyterlab>=4.0
+  - ipykernel
+  - nodejs  # Needed for extensions
+  
+  # Data Science Libs (Python)
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  
+  # R & Data Science Libs (R)
+  - r-base
+  - r-tidyverse
+  - r-dplyr
+  - r-ggplot2
+  - r-devtools
+  - r-languageserver  # For LSP
+  - r-styler          # For formatting
+  - r-irkernel        # <--- HIGHLY RECOMMENDED: Allows R kernels in Jupyter
+  
+  # The Bridge
+  - rpy2
+
+  # Extensions & Tools
+  - jupyterlab-git
+  - jupyterlab-lsp
+  - python-lsp-server[all]
+  - jupyter-resource-usage
+  - nbdime
+  
+  # Pip-only packages
+  - pip
+  - pip:
+    - jupyterlab-code-formatter
+    - jupyterlab-miami-nights
+    - black
+    - isort
+    - ipydrawio

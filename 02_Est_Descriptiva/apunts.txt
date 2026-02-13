@@ -1,0 +1,34 @@
+packages:
+pastecs - util per descripcions de dades (str, stat.desc, table, plot...)
+modeest - calcular la moda i altres mesures 
+vcd - eines per la visualitzacio i analisi de dades categoriques i taules de contingencia (complementa ggplot2)
+dplyr - manipulacio i transformacio de dades (group_by(), summarize()...)
+scales - util per graficar
+agricolae - crear taules de frequencia agrupades
+car - crear grafics de probabilitat (QQplots) per verificar la normalitat de les dades
+ggplot2 - crear visualitzacions complexes
+
+head(df, X) - veure X entrades
+tail(df) - veure ultimes entrades
+df[X,Y] - veure files/col concretes
+min(df$col) / max(df$col)
+range(df$col) - obtenir min [1] i max [2]
+mean(df, na.rm = TRUE) - mitjana sense NA
+sum(is.na(df)) - saber si tenim NA
+median(df) / quantile(df, 0,5)
+quantile(df, 0.25) / quantile(df, 0.75)
+IQR(df) - diferencia entre 1r i 3r quartil
+sd(df) - desviacio estandar
+var(df) - variança
+sd(df) / mean(df) - coeficient de variació 
+    aprox a 0 = conjunt homogeni - mitjana molt important
+table() - compta el nombre d'ocurrències de cada valor
+xtabs() - mateix pero mes potent
+prop.table() - passar a percentatges
+sort() - ordena els valors d'un vector
+
+summary() - tot junt
+by(df, df$col, summary) - per grup (aplicar qualsevol funció per grup)
+stat.desc() - mes potent que summay
+
+

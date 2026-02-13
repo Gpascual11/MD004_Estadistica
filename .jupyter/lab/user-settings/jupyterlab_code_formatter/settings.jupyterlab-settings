@@ -1,0 +1,11 @@
+{
+    "formatOnSave": true,
+    "preferences": {
+        "default_formatter": {
+            "python": ["isort", "black"],
+            "R": ["styler"],
+            "r": ["styler"],
+            "ir": ["styler"]
+        }
+    }
+}

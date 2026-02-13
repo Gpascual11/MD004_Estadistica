@@ -1,0 +1,42 @@
+Y- Balance
+X- No/Yes
+
+Probabilidad de si i no diferente alineación
+Si tenemos dos boxplots iguales -> La variable balance no tiene un efecto sobre la variable respuesta
+Si hay diferencia -> tiene efecto 
+
+Regresion multivariable
+	Std. Error al ser menor que 1 todos no salen rentables ninguno
+	Newspaper no es significativo, no tiene efecto por lo tanto sale negativo. Almenos con los datos que tenemos.
+		- Comportamiento de newspaper no es lineal
+		- Realmente la inversion en newspaper no funciona
+		- Newspaper esta muy correlacionado con TV i radio y el efecto lo cogen ellos
+	
+	R²- 0.897 - 89,7% de la variabilidad/variaciones de la variable respuesta son inversiones en interception, tv, radio, newspaper.
+	
+
+En las rectas una es superior que la otra
+
+variables- dos vairables que su comportamiento varian al mismo tiempo
+	una variable si tiene un augmento x, su variable correlacional diene un descenso x
+	edad - altura, peso - altura
+	
+matriz de covarianza y correlacion lo mismo
+	pero la correlacion es mucho mas interpretable va de -1 a 1.
+	covarianza tiene limites mucho mas amplios, mas complicado definir si es alta o no
+	ambas nos indican informacion entre aleatoriedad de variables
+	
+	correlacion es lineal!!
+	
+Ejemplo babies:
+	Correlación alta,
+	si dibujamos linea es completamente horizontal/vertical, no hay correlacion entre las variables
+
+Algo de pendiente:	
+	tiempo en gestacion - peso
+	peso - altura
+	
+F-test
+	Si lo hacemos con solo dos grupos es muy sencillo saber si hay diferencias
+	Si tenemos mas grupos -> Hay que descubrir cuales son
+	

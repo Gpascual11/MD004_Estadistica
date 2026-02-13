@@ -1,0 +1,33 @@
+package "readr"
+read_csv()
+write_csv()
+-------------------------------------------
+package "dplyr"
+select() - seleccionar col especifiques
+filter() - filtrar files en funció de condicions
+mutate() - crear o modificar columnes
+arrange() - ordenar les dades per una o varies columnes
+summarise() - calcular resums setadistics agrupats (nou df)
+group_by() - """""
+glimpse() - informacio de manera horitzontal (millora del str())
+%>% - operador pipe - passa el resultat de l'expressió de l'esquerra com a primer argument a la funció de la dreta
+-------------------------------------------
+package "tidyr"
+pivot_longer() - converteix dades de format ample a llarg (per anàlisi i ggplot2)
+pivot_wider() - converteix dades de format llarg a ample (millor visualització)
+separate() - divdeix una columna en varies columnes
+unite() - combina multiples columnes en una sola
+-------------------------------------------
+TRUE - 1 / FALSE - 0
+df_size$island <- as.factor(df_size$island) # conversió a tipus factor (Categories)
+summary() - mostrar estadistiques
+colSums(is.na(df_size)) - nombre total de (1s) NA per columna
+tolower() - convertir a minuscules
+select() - seleccionar columnes
+select(-col) - eliminar columna
+rename(__ = __) - cambiar nom de les etiquetes
+recode() - substitueix valors existents
+inner_join() - combinar columnes de diferents df (intersecció, nomes agafa els coincidents)
+ifelse() - logica fila per fila 
+    na.rm = TRUE - calcular mitjana sense tenir en compte NA
+round() - arrodoniment especificant nombre de decimals

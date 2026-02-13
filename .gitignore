@@ -11,3 +11,4 @@ node_modules/
 .ipynb_checkpoints/
 *.pyc
 __pycache__/
+.virtual_documents/

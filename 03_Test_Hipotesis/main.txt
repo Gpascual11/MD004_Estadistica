@@ -1,2 +1,0 @@
-t.test 3 + una cola negativa
-per veure si la mida de la mostra es suficient igualmetn el errror de tip1 sigui igual del tipo 2

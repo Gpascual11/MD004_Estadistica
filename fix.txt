@@ -1,3 +1,5 @@
+./bin/micromamba run -p ./env jupyter lab
+
 pip install --upgrade jupyterlab-git
 
 jupyter labextension install @jupyterlab/git@0.51.2
